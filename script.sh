@@ -5,7 +5,9 @@ set -e
 IS_DEPLOY=false
 
 if [ -z $PLUGIN_MODNAME ];then
+    echo "+ npm install"
     npm install
+    echo "+ npm build start. "
     ${PLUGIN_CMD}
     IS_DEPLOY=true
 else
