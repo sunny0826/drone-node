@@ -10,6 +10,7 @@ RUN apk add --no-cache musl-dev gcc g++ python3 python3-dev curl ca-certificates
     && pip install shyaml \
     && npm config set registry https://registry.npm.taobao.org \
     && npm config set unsafe-perm true \
-    && npm config set cache /root/.npm-cache --global
+    && npm config set cache /root/.npm-cache --global \
+    && npm install -g grunt grunt-cli bower
  
 ENTRYPOINT ["/bin/script.sh"]
